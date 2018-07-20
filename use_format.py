@@ -17,5 +17,10 @@ def format_str():
     t = (1,3,5,7,9)
     print('您打印的数组是：%s' %str(t))
 
+# 使用.format()格式化
+def format_str2():
+    print('欢迎您，{0},{1}'.format('amosniu','祝你学习Python顺利！'))
+
 if __name__ == '__main__':
     format_str()
+    format_str2()
