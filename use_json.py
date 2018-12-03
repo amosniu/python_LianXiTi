@@ -6,7 +6,8 @@ def pythonToJson():
         'name': 'python书籍',
         'price': 62.3
     }
-    jsonData = json.dumps(d)
+    # indent参数用来给输出结果缩进
+    jsonData = json.dumps(d,indent = 4)
     print(jsonData)
 
 def jsonToPython():
@@ -30,7 +31,17 @@ def jsonToPython():
     pythonData = json.loads(jsonData)
     print(pythonData)
 
+def jsonToPythonFromFile():
+    ''' 从文件中读取json数据，并转化成Python数据 '''
+    f = open('./static/book.json','r',encoding = 'utf-8')
+    s = f.read()
+    pythonData = json.loads(s)
+    print(pythonData)
+    print(pythonData['name'])
+
 if __name__ == '__main__':
     pythonToJson()
     print('---------------------------')
     jsonToPython()
+    print('---------------------------')
+    jsonToPythonFromFile()
