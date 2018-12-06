@@ -29,6 +29,7 @@ def jsonToPython():
     }
     '''
     pythonData = json.loads(jsonData)
+    print(type(pythonData))
     print(pythonData)
 
 def jsonToPythonFromFile():
@@ -36,6 +37,7 @@ def jsonToPythonFromFile():
     f = open('./static/book.json','r',encoding = 'utf-8')
     s = f.read()
     pythonData = json.loads(s)
+    print(type(pythonData))
     print(pythonData)
     print(pythonData['name'])
 
