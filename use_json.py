@@ -40,6 +40,7 @@ def jsonToPythonFromFile():
     print(type(pythonData))
     print(pythonData)
     print(pythonData['name'])
+    f.close()
 
 if __name__ == '__main__':
     pythonToJson()
